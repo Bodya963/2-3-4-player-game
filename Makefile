@@ -2,7 +2,7 @@ CFLAGS = -Wall -g -O
 
 NAME = tanki
 
-OBJ = 
+OBJ = main.o
 
 
 all: $(NAME)

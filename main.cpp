@@ -2,7 +2,6 @@
 
 int main ()
 {
-
-    // 2-3-4 player game
+    std::cout << 2 + 3 << std::endl;
     return 0;
 }
