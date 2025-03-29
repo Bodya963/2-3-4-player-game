@@ -1,8 +1,10 @@
 CFLAGS = -Wall -g -O
 
+SFML_FLAG = -lsfml-graphics -lsfml-window -lsfml-system
+
 NAME = tanki
 
-OBJ = main.o
+OBJ = main.o view.o model.o controller.o
 
 
 all: $(NAME)
@@ -11,7 +13,7 @@ all: $(NAME)
 	g++ -c -o $@ $^
 
 $(NAME) : $(OBJ)
-	g++ -o $(NAME) $^ $(CFLAGS)
+	g++ -o $(NAME) $^ $(CFLAGS) $(SFML_FLAG)
 
 clean:
 	$(RM) $(OBJ) $(NAME)
