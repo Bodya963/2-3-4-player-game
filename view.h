@@ -24,4 +24,8 @@ public:
     void set_model(model* model);
     void set_window(RenderWindow* window);
     void draw_map();
+
+    void run();
+    void draw_pl( player * pl);
+    void draw();
 };

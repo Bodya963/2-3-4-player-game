@@ -57,11 +57,36 @@ map::~map()
     delete[] tails;
 }
 
-model::model(){}
+
+player::player( char * name_file, Vector2f start_p, Keyboard::Key bt)
+{
+    strcpy( name, name_file);
+
+    buttom = bt;
+
+    tank_texture.loadFromFile( name_file);
+
+    tank_sprite.setTexture( tank_texture);
+
+    tank_sprite.setOrigin( TAILSIZE/2 , TAILSIZE/2 + 5);
+    tank_sprite.setPosition( start_p);
+
+    start_pos = start_p;
+}
+
+model::model()
+{
+    finish = 0;
+}
 
 void model::set_map( map * map1)
 {
     model_map = map1;
+}
+
+void model::set_player( player * pl)
+{
+    players.push_back( pl);
 }
 
 int model::get_tile( int x, int y)

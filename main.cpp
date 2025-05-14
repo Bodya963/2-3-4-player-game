@@ -29,25 +29,18 @@ int main (int argc, char** argv)
 
     main_view.set_model( &main_model);
     main_view.set_window( &win);
+
+
+    Vector2f start_pos(150.0, 150.0);
+    player pl_1("sprites/blue_tank.PNG", start_pos, Keyboard::Key::F );
+
+    main_model.set_player( &pl_1);
     
     win.clear();
 
     main_view.draw_map();
 
-    while( win.isOpen())
-    {
-        Event event;
-
-        while( win.pollEvent( event))
-        {
-            if( event.type == Event::Closed)
-            {
-                win.close();
-            }
-        }    
-        
-        win.display();
-    }
+    main_view.run();
     
     return 0;
 }

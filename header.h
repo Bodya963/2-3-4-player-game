@@ -34,3 +34,4 @@ using namespace sf;
 #define NAMESIZE 32
 #define MAXHEIGHT 2000
 #define MAXHWIDTH 4000
+#define PI 3.14159265
