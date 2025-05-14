@@ -27,3 +27,10 @@
 //----------------------------------
 
 using namespace sf;
+
+//-----define-----------------------
+
+#define TAILSIZE 100
+#define NAMESIZE 32
+#define MAXHEIGHT 2000
+#define MAXHWIDTH 4000

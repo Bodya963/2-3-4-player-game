@@ -10,12 +10,12 @@ private:
     RenderWindow* win;
 
     Texture grass_texture;
-    Texture wall_texture;
+    Texture plant_texture;
     Texture water_texture;
     Texture back_texture;
 
     Sprite grass_sprite;
-    Sprite wall_sprite;
+    Sprite plant_sprite;
     Sprite water_sprite;
     Sprite back_sprite;
 

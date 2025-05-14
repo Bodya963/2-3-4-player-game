@@ -9,16 +9,30 @@
 //----------------------------
 
 
-int main ()
+int main (int argc, char** argv)
 {
     view main_view;
     model main_model;
     controller main_controller;
 
-    RenderWindow win( VideoMode( 1000, 1000), "TANKI Z", Style::Default);
+    if( argc != 2)
+    {
+        printf( "Not such map: less or more args\n");
+        exit(1);
+    }
+
+    map main_map( argv[1]);
+
+    main_model.set_map( &main_map);
+
+    RenderWindow win( VideoMode( main_map.width * TAILSIZE, main_map.height * TAILSIZE), "TANKI Z", Style::Default);
 
     main_view.set_model( &main_model);
     main_view.set_window( &win);
+    
+    win.clear();
+
+    main_view.draw_map();
 
     while( win.isOpen())
     {
@@ -30,14 +44,10 @@ int main ()
             {
                 win.close();
             }
-        }
-
-        win.clear();
-
-        main_view.draw_map();
-
+        }    
+        
         win.display();
     }
-
+    
     return 0;
 }
