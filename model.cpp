@@ -62,6 +62,9 @@ player::player( char * name_file, Vector2f start_p, Keyboard::Key bt)
 {
     strcpy( name, name_file);
 
+    grad = 2;
+    flag_rot = 0;
+
     buttom = bt;
 
     tank_texture.loadFromFile( name_file);

@@ -29,6 +29,9 @@ public:
     Keyboard::Key buttom;
 
     float rot;
+
+    int flag_rot;
+    int grad;
 public:
     player( char * name_file, Vector2f start_p, Keyboard::Key bt);
 

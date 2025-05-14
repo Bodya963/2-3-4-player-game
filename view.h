@@ -19,6 +19,9 @@ private:
     Sprite water_sprite;
     Sprite back_sprite;
 
+    FloatRect water_box;
+    FloatRect plant_box;
+
 public:
     view();
     void set_model(model* model);
@@ -28,4 +31,5 @@ public:
     void run();
     void draw_pl( player * pl);
     void draw();
+    bool is_collision( player * pl);
 };
